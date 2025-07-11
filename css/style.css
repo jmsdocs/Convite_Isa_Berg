@@ -120,34 +120,30 @@
  #convite {
   width: 100vw;
   height: 100vh;
-  background: url('../img/background.png') no-repeat center center fixed;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
- }
+  background: url('../img/background.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
 
 .convite-inner {
-  width: 390px;
-  height: 844px;
+  width: 100vw;
+  max-width: 1080px;
+  height: auto;
   position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
 .imagem-convite {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 13px;
 }
 
 @keyframes fadeIn {
@@ -237,10 +233,10 @@
 }
 
 /* Ajustes para celular */
-@media (max-width: 420px) {
+@media (max-width: 576px) {
   .convite-inner {
-    width: 100vw;
-    height: 100vh;
+    aspect-ratio: auto; /* remove proporção fixa se necessário em telas muito pequenas */
+    padding: 10px;
   }
 
   #botao-site {
