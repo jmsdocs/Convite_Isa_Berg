@@ -100,7 +100,7 @@
   width: 60px;
   height: 60px;
   transform: translate(-50%, -50%);
-  border: 2px solid rgba(38, 70, 55, 0.6);
+  border: 2px solid rgba(192, 150, 11, 0.6);
   border-radius: 50%;
   animation: pulse 1.8s ease-in-out infinite;
   z-index: -1;
