@@ -64,7 +64,7 @@
 }
 
 #botao-abrir1 {
-  bottom: 250px;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
 }
