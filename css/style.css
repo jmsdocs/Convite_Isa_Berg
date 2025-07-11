@@ -130,29 +130,24 @@
       justify-content: center;
     }
 
-    .convite-inner {
-      background: url('../img/convite_site_cel.png') no-repeat center center;
-      background-size: contain;
-      width: 98vw;
-      max-width: 1280px;
-      height: auto;
-      aspect-ratio: 3/4; /* ajuste de proporção visual do convite */
-      border-radius: 20px;    
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      /*animation: fadeIn 1s ease;*/
-      /*animation: waveMotion 6s ease-in-out infinite;*/
-      /*transform-origin: center;*/
-      /* NOVO: layout vertical flexível */
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      /*box-sizing: border-box;*/
-      position: relative;
-    }
+.convite-inner {
+  width: 98vw;
+  max-width: 1200px;
+  height: 100vh;
+  background: url('../img/convite.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* empurra conteúdo para a base */
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    @keyframes fadeIn {
+@keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
@@ -206,9 +201,8 @@
   }
 }
   #botao-site {
-  width: 90%;
-  max-width: 320px;
-  padding: 14px 24px;
+  display: inline-block;
+  padding: 14px 28px;
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
@@ -220,7 +214,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   animation: pulseBotao 2s infinite;
-  margin-top: auto;
   margin-bottom: 10px;
 }
 
