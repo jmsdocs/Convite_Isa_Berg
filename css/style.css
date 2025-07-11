@@ -10,14 +10,14 @@
       height: 100%;
       width: 100%;
       font-family: 'Montserrat', sans-serif;
-      background: #003300;
+      background: #e7eee7;
       overflow: hidden;
     }
 
     #envelope-container {
       position: fixed;
       inset: 0;
-      background-color: #003300;
+      background-color: #e7eee7;
       display: flex;
       justify-content: center;
       align-items: center;
