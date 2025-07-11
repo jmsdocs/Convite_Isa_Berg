@@ -11,7 +11,7 @@ const musicaFundo = document.getElementById('musica-fundo');
 // Clique no selo (1ª etapa)
 botao1.addEventListener('click', () => {
   flipSound.play();
-  imgEnvelope.src = 'img/envelope_aberto_convite_cel.png'; // troca imagem
+  imgEnvelope.src = 'img/envelope_aberto_convite_pc.png'; // troca imagem
   imgEnvelope.classList.add('aberto');
   botao1.style.display = 'none';
   setTimeout(() => {
