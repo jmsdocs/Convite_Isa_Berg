@@ -201,9 +201,10 @@
 }
   #botao-site {
   position: absolute;
+  width: 80%;
   bottom: 10%;
   left: 50%;
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   padding: 14px 28px;
   font-size: 0.8rem;
   font-weight: bold;
