@@ -1,0 +1,251 @@
+/* Arquivo style.css (placeholder para estilos visuais) */
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background: #003300;
+      overflow: hidden;
+    }
+
+    #envelope-container {
+      position: fixed;
+      inset: 0;
+      background-color: #003300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      transition: opacity 1s ease;
+      overflow: hidden;
+    }
+
+    #envelope {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    #img-envelope {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 98vw;
+      height: auto;
+      max-height: 100vh;
+      transform: translate(-50%, -50%);
+     }
+    
+      #img-envelope.aberto {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 98vw;
+      height: auto;
+      max-height: 100vh;
+      transform: translate(-50%, -50%);
+      }
+
+
+  #botao-abrir1, #botao-abrir2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#botao-abrir1 {
+  bottom: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#botao-abrir2 {
+  display: none;
+  top: 44.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Efeito pulsante botão1 */
+#botao-abrir1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  animation: pulse 1.8s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Efeito pulsante botão2 */
+#botao-abrir2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(38, 70, 55, 0.6);
+  border-radius: 50%;
+  animation: pulse 1.8s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+  #convite {
+      display: none;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: url('../img/background.png') no-repeat center center fixed;
+      background-size: contain;
+      background-repeat: repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .convite-inner {
+      background: url('../img/convite_site_cel.png') no-repeat center center;
+      background-size: contain;
+      width: 98vw;
+      max-width: 1280px;
+      height: auto;
+      aspect-ratio: 3/4; /* ajuste de proporção visual do convite */
+      border-radius: 20px;    
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      /*animation: fadeIn 1s ease;*/
+      /*animation: waveMotion 6s ease-in-out infinite;*/
+      /*transform-origin: center;*/
+      /* NOVO: layout vertical flexível */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      /*box-sizing: border-box;*/
+      position: relative;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+/* Movimento suave de "brisa" */
+@keyframes waveMotion {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0.3deg) scale(1.002);
+  }
+  50% {
+    transform: rotate(-0.3deg) scale(1);
+  }
+  75% {
+    transform: rotate(0.2deg) scale(1.001);
+  }
+}
+
+  #petalas-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* ← agora está por trás do conteúdo */
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/petala_branca.png'); /* ← imagem PNG de pétala branca */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  animation: cair 10s linear infinite;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+  #botao-site {
+  width: 90%;
+  max-width: 320px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #264637;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulseBotao 2s infinite;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+/* Animação de pulsar */
+@keyframes pulseBotao {
+  0% {
+    box-shadow: 0 0 0 0 rgba(38, 70, 55, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(38, 70, 55, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(38, 70, 55, 0);
+  }
+}
+
+/* Ajustes para celular */
+@media (max-width: 576px) {
+  .convite-inner {
+    aspect-ratio: auto; /* remove proporção fixa se necessário em telas muito pequenas */
+    padding: 16px;
+  }
+
+  #botao-site {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
